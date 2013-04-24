@@ -1,24 +1,21 @@
 class RomanNumerals
   ROMAN_NUMERAL_KEY = {
-    1000 => 'M',
-    500 => 'D',
-    100 => 'C',
-    50  => 'L',
-    10  => 'X',
-    5   => 'V',
-    1   => 'I',
+    1000 => 'M' ,
+    900  => 'CM',
+    500  => 'D' ,
+    100  => 'C' ,
+    90   => 'XC',
+    50   => 'L' ,
+    40   => 'XL',
+    10   => 'X' ,
+    9    => 'IX',
+    5    => 'V' ,
+    4    => 'IV',
+    1    => 'I' ,
   }
 
   def calculate(number)
     result = ""
-
-    # ROMAN_NUMERAL_KEY.keys.each do |key|
-    # # binding.pry if key == 10
-    #   if (number + 1) >= key && (number + 1) % key == 0 and key != 1
-    #     result << "I"
-    #     number += 1
-    #   end
-    # end
 
     ROMAN_NUMERAL_KEY.keys.each do |key|
       while number >= key
